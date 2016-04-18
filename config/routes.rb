@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/say_name/:name', to: 'site#say_name'
 
+  get '/calculator' => 'site#calculator'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

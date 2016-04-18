@@ -10,4 +10,7 @@ class SiteController < ApplicationController
 		@name = params[:name]
 		render 'say_name'
 	end
+	def calculator
+		render 'calculator'
+	end
 end
