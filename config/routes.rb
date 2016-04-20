@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'site#home'
 
-  get '/projects', to: 'projects#index'
+  get '/projects', to: 'projects#index', as: :projects
 
   get '/projects/:id', to: 'projects#show'
 

@@ -4,6 +4,9 @@ class ProjectsController < ApplicationController
 		render 'index'
 	end
 	def show
-		@my_project = Project.find(params[:id])
+		@my_project = Project.find_by(id:params[:id])
+		unless @my_project
+			render "no_projects_found"
+		end
 	end
 end
