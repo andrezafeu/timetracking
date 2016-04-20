@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
 		@projects = Project.order(created_at: :desc).limit(10)
 		render 'index'
 	end
+	def new
+		@my_project = Project.new
+		render "new"
+	end
 	def show
 		@my_project = Project.find_by(id:params[:id])
 		unless @my_project
