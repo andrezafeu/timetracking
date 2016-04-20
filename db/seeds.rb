@@ -3,6 +3,7 @@ project2 = Project.create(name: 'Timetracking', description: 'Tracks the time sp
 project3 = Project.create(name: 'Recipes', description: 'Track my favorite recipes')
 
 project1.time_entries.create(hours: 1, minutes: 45)
+project1.time_entries.create(hours: 0, minutes: 30)
 project2.time_entries.create(hours: 0, minutes: 30)
 project3.time_entries.create(hours: 2, minutes: 0)
 

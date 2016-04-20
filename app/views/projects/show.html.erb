@@ -1,4 +1,8 @@
 <h3><%= @my_project.name %></h3>
 <p><%= @my_project.description %></p>
+<% @my_project.time_entries.each do |time_entry| %>
+	<b><p>Entry: </p></b>
+	<p>Hours: <%= time_entry.hours%> Minutes: <%= time_entry.minutes%></p>
+<% end %>
 <br>
 <%= link_to 'Return to projects\'s page', projects_path %>
