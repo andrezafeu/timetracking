@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/projects/new', to: 'projects#new'
 
+  get '/projects', to: 'projects#create'
+
   get '/projects/:id', to: 'projects#show'
 
   get '/contact', to: 'site#contact'
