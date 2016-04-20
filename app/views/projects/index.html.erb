@@ -1,7 +1,8 @@
+<h1>Projects</h1>
 <ul>
 	<% @projects.each do |project| %>
 		<li>
-			<%= link_to project.name, "/projects/#{project.id}" %>
+			<b><%= link_to project.name, "/projects/#{project.id}" %></b>
 			<% if (project.description) %>
 				-
 			<% end %>
