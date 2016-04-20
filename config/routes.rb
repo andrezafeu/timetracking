@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/projects', to: 'projects#index', as: :projects
 
-  get '/projects/new', to: 'projects#new'
+  get '/projects/new', to: 'projects#new', as: :newproject
 
   post '/projects', to: 'projects#create'
 
