@@ -6,4 +6,9 @@ class Project < ActiveRecord::Base
 	uniqueness: true, 
 	length: { maximum: 30 }, 
 	format: { with: /\s[a-zA-Z0-9]/}
+
+	def self.clean_old
+		old_projects = Project.where("created_at < ?", 7.days.ago)
+		old_projects.destroy_all
+	end
 end
