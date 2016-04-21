@@ -2,13 +2,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'site#home'
 
-  get '/projects', to: 'projects#index', as: :projects
-
-  get '/projects/new', to: 'projects#new', as: :newproject
-
-  post '/projects', to: 'projects#create'
-
-  get '/projects/:id', to: 'projects#show'
+  resources :projects
 
   get '/projects/:project_id/time_entries', to: 'time_entries#index'
 
