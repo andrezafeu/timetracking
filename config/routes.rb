@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/projects/:project_id/time_entries/:id/edit', to: 'time_entries#edit', 
     as: :edit_time_entry
 
+  patch '/projects/:project_id/time_entries/:id', to: 'time_entries#update', 
+  as: :project_time_entry
+
   get '/contact', to: 'site#contact'
 
   get '/say_name/:name', to: 'site#say_name'
