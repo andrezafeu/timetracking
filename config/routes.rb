@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post '/projects/:project_id/time_entries', 
     to: 'time_entries#create', as: :project_time_entries
 
+  get '/projects/:project_id/time_entries/:id/edit', to: 'time_entries#edit'
+
   get '/contact', to: 'site#contact'
 
   get '/say_name/:name', to: 'site#say_name'
