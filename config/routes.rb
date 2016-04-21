@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   get '/projects/:project_id/time_entries', to: 'time_entries#index'
 
-  get '/projects/:project_id/time_entries/new', to: 'time_entries#new'
+  get '/projects/:project_id/time_entries/new', to: 'time_entries#new', 
+    as: :newtimeentry
 
   post '/projects/:project_id/time_entries', 
     to: 'time_entries#create', as: :project_time_entries
