@@ -9,6 +9,16 @@ class TimeEntriesController < ApplicationController
 		render "new"
 	end
 	def create
-
+		@my_entry = @my_project.time_entries.new(
+			hours: params[:time_entry][:hours],
+			minutes: params[:time_entry][:minutes],
+			date: params[:time_entry][:minutes]
+			)
+		if @my_entry.save
+			redirect_to action: "index", controller: "time_entries", 
+			project_id: @my_project.id
+		else
+			render "new"
+		end
 	end
 end
