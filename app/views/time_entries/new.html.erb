@@ -1,4 +1,13 @@
 <h2>Add a Time Entry</h2>
+
+<% if @my_entry.errors.any? %>
+	<ul>
+		<% @my_entry.errors.full_messages.each do |error_msg| %>
+			<li><%=error_msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_for [@my_project, @my_entry] do |f| %>
 		<%= f.label :hours %>
 		<%= f.number_field :hours %>
@@ -11,3 +20,4 @@
 
 		<%= f.submit "Save" %>
 <% end %>
+
