@@ -37,6 +37,7 @@ class TimeEntriesController < ApplicationController
 			render "edit"
 		end
 	end
+	private
 	def entry_params
 		params.require(:time_entry).permit(:hours, :minutes, :date)
 	end
