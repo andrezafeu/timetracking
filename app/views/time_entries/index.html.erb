@@ -5,8 +5,9 @@
 			<%= entry.hours %> h
 			<%= entry.minutes %> m -
 			<%= entry.date %>
+			<%= link_to "Edit time entry", edit_time_entry_path(entry.project_id, entry.id)  %>
 		</li>
 	<% end %>
 </ul>
 
-<%= link_to "Add a new time entry", newtimeentry_path  %>
+<%= link_to "Add a new time entry", new_time_entry_path  %>

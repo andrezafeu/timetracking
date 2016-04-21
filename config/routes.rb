@@ -13,12 +13,13 @@ Rails.application.routes.draw do
   get '/projects/:project_id/time_entries', to: 'time_entries#index'
 
   get '/projects/:project_id/time_entries/new', to: 'time_entries#new', 
-    as: :newtimeentry
+    as: :new_time_entry
 
   post '/projects/:project_id/time_entries', 
     to: 'time_entries#create', as: :project_time_entries
 
-  get '/projects/:project_id/time_entries/:id/edit', to: 'time_entries#edit'
+  get '/projects/:project_id/time_entries/:id/edit', to: 'time_entries#edit', 
+    as: :edit_time_entry
 
   get '/contact', to: 'site#contact'
 
