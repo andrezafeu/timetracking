@@ -5,7 +5,7 @@
 			<%= entry.hours %> h
 			<%= entry.minutes %> m -
 			<%= entry.date %>
-			<%= link_to "Edit time entry", edit_time_entry_path(entry.project_id, entry.id)  %>
+			<%= link_to "Edit time entry", edit_project_time_entry_path(entry.project_id, entry.id)  %>
 			<%= link_to("Delete this entry", destroy_time_entry_path(@my_project, @my_entry), method: "delete", data: { confirm: "Are you sure?"}) %>
 		</li>
 	<% end %>
