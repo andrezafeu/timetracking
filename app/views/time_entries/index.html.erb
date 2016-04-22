@@ -6,9 +6,11 @@
 			<%= entry.minutes %> m -
 			<%= entry.date %>
 			<%= link_to "Edit time entry", edit_project_time_entry_path(entry.project_id, entry.id)  %>
-			<%= link_to("Delete this entry", destroy_time_entry_path(@my_project, @my_entry), method: "delete", data: { confirm: "Are you sure?"}) %>
+			<%= link_to("Delete this entry", project_time_entry_path(entry.project_id, entry.id), method: "delete", data: { confirm: "Are you sure?"}) %>
+			<!-- entry.project_id (this only works in the loop) = @my_project.id = @my_project -->
+			<!-- entry.id = entry (only for path purposes) -->
 		</li>
 	<% end %>
 </ul>
 
-<%= link_to "Add a new time entry", new_time_entry_path  %>
+<%= link_to "Add a new time entry", new_project_time_entry_path(@my_project.id)  %>
